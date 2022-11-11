@@ -1,0 +1,764 @@
+2022-11-08 09:32:28.992 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 18916 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 09:32:28.998 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 09:32:29.571 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 09:32:29.577 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 09:32:29.578 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 09:32:29.578 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 09:32:29.580 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 09:32:29.580 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 09:32:29.580 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 09:32:29.580 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 09:32:30.624 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 09:32:30.694 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 09:32:30.694 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1665 ms
+2022-11-08 09:32:30.949 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 09:32:30.972 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 09:32:30.980 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.375 seconds (JVM running for 3.103)
+2022-11-08 09:32:30.981 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 09:32:30.982 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 09:32:33.762 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 09:32:33.762 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 09:32:33.762 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2022-11-08 09:32:33.809 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 09:32:36.367 INFO  com.gznx.service.ExecutorService                  :74   [32m                  [0;39m --------------------开始执行：ping 10.128.103.45 --------------------
+2022-11-08 09:32:36.449 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 
+2022-11-08 09:32:36.450 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 09:32:39.131 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:32:42.124 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:32:45.135 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:32:48.133 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:32:48.134 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 
+2022-11-08 09:32:48.135 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 09:32:48.137 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 09:32:52.870 INFO  com.gznx.service.ExecutorService                  :74   [32m                  [0;39m --------------------开始执行：ping 10.128.103.45 --------------------
+2022-11-08 09:32:52.958 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 
+2022-11-08 09:32:52.958 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 09:32:55.628 ERROR com.gznx.service.ExecutorService                  :45   [32m                  [0;39m 日志流读取线程中断！
+java.lang.InterruptedException: 线程被中断
+	at com.gznx.service.ExecutorService$1.run(ExecutorService.java:34)
+	at java.lang.Thread.run(Thread.java:748)
+2022-11-08 09:33:08.256 INFO  com.gznx.service.ExecutorService                  :74   [32m                  [0;39m --------------------开始执行：ping 10.128.103.45 --------------------
+2022-11-08 09:33:08.335 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 
+2022-11-08 09:33:08.335 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 09:33:11.126 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:33:14.131 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:33:17.125 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:33:20.131 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:33:20.131 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 
+2022-11-08 09:33:20.132 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 09:33:20.132 INFO  com.gznx.service.ExecutorService                  :38   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 09:53:06.598 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 13048 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 09:53:06.601 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 09:53:07.141 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 09:53:07.148 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 09:53:07.149 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 09:53:07.149 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 09:53:07.150 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 09:53:07.150 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 09:53:07.151 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 09:53:07.151 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 09:53:08.190 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 09:53:08.258 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 09:53:08.258 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1623 ms
+2022-11-08 09:53:08.489 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 09:53:08.501 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 09:53:08.508 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.316 seconds (JVM running for 3.018)
+2022-11-08 09:53:08.510 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 09:53:08.510 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 09:53:12.579 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 09:53:12.580 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 09:53:12.580 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2022-11-08 09:53:12.626 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 09:53:14.952 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m --------------------开始执行：ping 10.128.103.45 --------------------
+2022-11-08 09:53:15.013 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 09:53:15.014 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 09:53:16.135 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:53:19.134 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:53:22.131 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:53:25.125 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:53:25.127 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 09:53:25.128 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 09:53:25.129 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 09:53:25.139 INFO  com.gznx.service.ExecutorService                  :65   [32m                  [0;39m --------------------ping 10.128.103.45 执行完毕！exit code: 0--------------------
+2022-11-08 09:53:34.188 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m --------------------开始执行：ping 10.128.103.45 --------------------
+2022-11-08 09:53:34.257 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 09:53:34.257 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 09:53:37.133 ERROR com.gznx.service.ExecutorService                  :51   [32m                  [0;39m 日志流读取线程中断！
+java.lang.InterruptedException: 线程被中断
+	at com.gznx.service.ExecutorService$1.run(ExecutorService.java:38)
+	at java.lang.Thread.run(Thread.java:748)
+2022-11-08 09:53:37.134 INFO  com.gznx.service.ExecutorService                  :65   [32m                  [0;39m --------------------ping 10.128.103.45 执行完毕！exit code: 1--------------------
+2022-11-08 09:54:08.878 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 09:54:11.065 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 10948 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 09:54:11.068 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 09:54:11.586 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 09:54:11.592 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 09:54:11.592 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 09:54:11.593 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 09:54:11.594 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 09:54:11.594 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 09:54:11.594 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 09:54:11.594 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 09:54:12.644 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 09:54:12.723 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 09:54:12.723 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1621 ms
+2022-11-08 09:54:12.973 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 09:54:12.987 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 09:54:12.994 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.315 seconds (JVM running for 3.143)
+2022-11-08 09:54:12.996 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 09:54:12.996 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 09:54:15.366 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 09:54:15.366 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 09:54:15.367 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2022-11-08 09:54:15.413 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 09:54:17.089 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m --------------------开始执行：ping 10.128.103.45 --------------------
+2022-11-08 09:54:17.159 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 09:54:17.160 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 09:54:20.133 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 09:54:20.134 ERROR com.gznx.websocket.LogMessageHandler              :52   [32m                  [0;39m 向用户[admin]发送消息失败！
+java.io.IOException: The current thread was interrupted while waiting for a blocking send to complete
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:309)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:254)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:227)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:49)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:215)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:106)
+	at com.gznx.websocket.LogMessageHandler.sendMessageToUser(LogMessageHandler.java:50)
+	at com.gznx.service.ExecutorService$1.run(ExecutorService.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1326)
+	at java.util.concurrent.Semaphore.tryAcquire(Semaphore.java:409)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:299)
+	... 8 common frames omitted
+2022-11-08 09:54:20.135 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:54:23.131 ERROR com.gznx.websocket.LogMessageHandler              :55   [32m                  [0;39m 用户[admin]session不存在或未开启！
+2022-11-08 09:54:23.131 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:54:26.133 ERROR com.gznx.websocket.LogMessageHandler              :55   [32m                  [0;39m 用户[admin]session不存在或未开启！
+2022-11-08 09:54:26.133 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:54:29.130 ERROR com.gznx.websocket.LogMessageHandler              :55   [32m                  [0;39m 用户[admin]session不存在或未开启！
+2022-11-08 09:54:29.130 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:54:29.130 ERROR com.gznx.websocket.LogMessageHandler              :55   [32m                  [0;39m 用户[admin]session不存在或未开启！
+2022-11-08 09:54:29.130 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 09:54:29.131 ERROR com.gznx.websocket.LogMessageHandler              :55   [32m                  [0;39m 用户[admin]session不存在或未开启！
+2022-11-08 09:54:29.131 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 09:54:29.131 ERROR com.gznx.websocket.LogMessageHandler              :55   [32m                  [0;39m 用户[admin]session不存在或未开启！
+2022-11-08 09:54:29.131 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 09:54:29.142 INFO  com.gznx.service.ExecutorService                  :65   [32m                  [0;39m --------------------ping 10.128.103.45 执行完毕！exit code: 0--------------------
+2022-11-08 09:55:14.350 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 13556 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 09:55:14.353 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 09:55:14.911 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 09:55:14.917 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 09:55:14.917 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 09:55:14.918 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 09:55:14.919 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 09:55:14.919 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 09:55:14.919 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 09:55:14.919 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 09:55:15.956 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 09:55:16.030 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 09:55:16.030 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1643 ms
+2022-11-08 09:55:16.277 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 09:55:16.300 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 09:55:16.306 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.364 seconds (JVM running for 3.024)
+2022-11-08 09:55:16.309 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 09:55:16.309 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 09:55:18.847 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 09:55:18.847 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 09:55:18.848 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-11-08 09:55:18.892 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 09:55:21.311 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m --------------------开始执行：ping 10.128.103.45 --------------------
+2022-11-08 09:55:21.383 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 09:55:21.384 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 09:55:24.141 ERROR com.gznx.service.ExecutorService                  :51   [32m                  [0;39m 日志流读取线程中断！
+java.lang.InterruptedException: 线程被中断
+	at com.gznx.service.ExecutorService$1.run(ExecutorService.java:38)
+	at java.lang.Thread.run(Thread.java:748)
+2022-11-08 09:55:24.142 INFO  com.gznx.service.ExecutorService                  :65   [32m                  [0;39m --------------------ping 10.128.103.45 执行完毕！exit code: 1--------------------
+2022-11-08 09:55:28.330 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m --------------------开始执行：ping 10.128.103.45 --------------------
+2022-11-08 09:55:28.407 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 09:55:28.407 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 09:55:31.126 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:55:34.132 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:55:37.123 ERROR com.gznx.service.ExecutorService                  :51   [32m                  [0;39m 日志流读取线程中断！
+java.lang.InterruptedException: 线程被中断
+	at com.gznx.service.ExecutorService$1.run(ExecutorService.java:38)
+	at java.lang.Thread.run(Thread.java:748)
+2022-11-08 09:55:37.124 INFO  com.gznx.service.ExecutorService                  :65   [32m                  [0;39m --------------------ping 10.128.103.45 执行完毕！exit code: 1--------------------
+2022-11-08 09:59:23.629 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 09:59:25.782 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 17024 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 09:59:25.785 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 09:59:26.351 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 09:59:26.357 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 09:59:26.357 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 09:59:26.357 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 09:59:26.358 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 09:59:26.359 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 09:59:26.359 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 09:59:26.359 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 09:59:27.405 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 09:59:27.477 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 09:59:27.478 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1662 ms
+2022-11-08 09:59:27.729 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 09:59:27.743 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 09:59:27.750 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.373 seconds (JVM running for 3.147)
+2022-11-08 09:59:27.752 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 09:59:27.752 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 09:59:33.922 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 09:59:33.922 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 09:59:33.923 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-11-08 09:59:33.974 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 09:59:35.206 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m --------------------开始执行：ping 10.128.103.45 --------------------
+2022-11-08 09:59:35.277 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 09:59:35.277 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 09:59:36.638 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:59:39.626 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:59:42.633 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:59:45.634 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 09:59:45.636 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 09:59:45.637 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 09:59:45.638 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 09:59:45.649 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m --------------------ping 10.128.103.45 执行完毕！exit code: 0--------------------
+2022-11-08 10:00:01.771 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m --------------------开始执行：ping 10.128.103.45 --------------------
+2022-11-08 10:00:01.853 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:00:01.854 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 10:00:04.629 ERROR com.gznx.service.ExecutorService                  :52   [32m                  [0;39m ping 10.128.103.45 执行线程中断！
+java.lang.InterruptedException: 线程被手动中断
+	at com.gznx.service.ExecutorService$1.run(ExecutorService.java:38)
+	at java.lang.Thread.run(Thread.java:748)
+2022-11-08 10:01:24.667 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 10:01:26.731 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 2724 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 10:01:26.734 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 10:01:27.266 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 10:01:27.271 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 10:01:27.272 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 10:01:27.272 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 10:01:27.273 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 10:01:27.273 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 10:01:27.273 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 10:01:27.273 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 10:01:28.313 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 10:01:28.382 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 10:01:28.383 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1619 ms
+2022-11-08 10:01:28.614 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 10:01:28.627 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 10:01:28.633 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.296 seconds (JVM running for 2.997)
+2022-11-08 10:01:28.635 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 10:01:28.635 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 10:01:37.798 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 10:01:37.799 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 10:01:37.799 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2022-11-08 10:01:37.849 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 10:01:39.185 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:01:39.254 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:01:39.254 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 10:01:40.624 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:01:43.629 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:01:46.628 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:01:49.629 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:01:49.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:01:49.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 10:01:49.631 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 10:01:49.642 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 10:01:57.169 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:01:57.240 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:01:57.241 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 10:02:00.128 ERROR com.gznx.service.ExecutorService                  :52   [32m                  [0;39m ping 10.128.103.45 执行线程中断！
+java.lang.InterruptedException: 线程被手动中断
+	at com.gznx.service.ExecutorService$1.run(ExecutorService.java:38)
+	at java.lang.Thread.run(Thread.java:748)
+2022-11-08 10:03:14.478 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 10:03:16.911 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:03:27.141 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 10:03:32.841 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:03:35.018 ERROR com.gznx.service.ExecutorService                  :52   [32m                  [0;39m ping 10.128.103.45 执行线程中断！
+java.lang.InterruptedException: null
+	at java.lang.ProcessImpl.waitFor(ProcessImpl.java:451)
+	at com.gznx.service.ExecutorService$1.run(ExecutorService.java:47)
+	at java.lang.Thread.run(Thread.java:748)
+2022-11-08 10:04:00.487 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:04:12.141 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 10:22:52.860 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 16964 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 10:22:52.862 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 10:22:53.424 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 10:22:53.430 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 10:22:53.430 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 10:22:53.430 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 10:22:53.431 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 10:22:53.431 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 10:22:53.432 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 10:22:53.432 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 10:22:54.485 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 10:22:54.556 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 10:22:54.556 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1664 ms
+2022-11-08 10:22:54.780 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 10:22:54.802 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 10:22:54.808 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.352 seconds (JVM running for 3.122)
+2022-11-08 10:22:54.810 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 10:22:54.810 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 10:23:02.030 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 10:23:02.030 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 10:23:02.031 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2022-11-08 10:23:02.088 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 10:23:04.210 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:23:04.280 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:23:04.280 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 10:23:05.628 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:23:08.628 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:23:11.637 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:23:14.625 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:23:14.626 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:23:14.626 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 10:23:14.626 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 10:23:14.637 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 10:23:18.280 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:23:18.358 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:23:18.358 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m ���� Ping 10.128.103.45 ���� 32 �ֽڵ�����:
+2022-11-08 10:23:21.126 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m ���� 10.128.103.44 �Ļظ�: �޷�����Ŀ��������
+2022-11-08 10:23:24.125 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m ���� 10.128.103.44 �Ļظ�: �޷�����Ŀ��������
+2022-11-08 10:23:27.133 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m ���� 10.128.103.44 �Ļظ�: �޷�����Ŀ��������
+2022-11-08 10:23:30.136 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m ���� 10.128.103.44 �Ļظ�: �޷�����Ŀ��������
+2022-11-08 10:23:30.137 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:23:30.137 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 �� Ping ͳ����Ϣ:
+2022-11-08 10:23:30.137 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     ���ݰ�: �ѷ��� = 4���ѽ��� = 4����ʧ = 0 (0% ��ʧ)��
+2022-11-08 10:23:30.148 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 10:24:18.558 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:24:18.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:24:18.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 10:24:21.639 ERROR com.gznx.service.ExecutorService                  :52   [32m                  [0;39m ping 10.128.103.45 执行线程中断！
+java.lang.InterruptedException: 线程被手动中断
+	at com.gznx.service.ExecutorService$1.run(ExecutorService.java:38)
+	at java.lang.Thread.run(Thread.java:748)
+2022-11-08 10:25:06.555 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:25:06.629 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:25:06.629 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 10:25:09.628 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:25:12.629 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:25:15.628 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:25:18.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:25:18.631 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:25:18.632 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 10:25:18.633 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 10:25:18.644 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 10:27:42.275 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 9944 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 10:27:42.277 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 10:27:42.841 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 10:27:42.847 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 10:27:42.847 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 10:27:42.847 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 10:27:42.848 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 10:27:42.849 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 10:27:42.849 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 10:27:42.849 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 10:27:43.907 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 10:27:44.007 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 10:27:44.007 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1696 ms
+2022-11-08 10:27:44.269 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 10:27:44.283 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 10:27:44.290 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.412 seconds (JVM running for 3.123)
+2022-11-08 10:27:44.292 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 10:27:44.292 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 10:27:46.654 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 10:27:46.654 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 10:27:46.654 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2022-11-08 10:27:46.703 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 10:27:48.130 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:27:48.205 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:27:48.206 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 10:27:49.638 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:27:52.638 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:27:55.634 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:27:58.624 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:27:58.625 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:27:58.627 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 10:27:58.628 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 10:27:58.639 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 10:28:02.268 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 10:28:02.363 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 10:28:02.363 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 10:28:05.137 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:28:08.127 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 10:28:08.157 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 14:08:30.674 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 4536 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 14:08:30.708 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 14:08:31.951 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 14:08:31.977 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 14:08:31.978 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 14:08:31.978 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 14:08:31.980 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 14:08:31.980 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 14:08:31.980 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 14:08:31.981 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 14:08:33.040 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 14:08:33.231 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 14:08:33.231 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 2422 ms
+2022-11-08 14:08:33.658 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 14:08:33.673 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 14:08:33.692 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 3.715 seconds (JVM running for 4.763)
+2022-11-08 14:08:33.694 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 14:08:33.694 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 14:08:39.422 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 14:08:39.422 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 14:08:39.423 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-11-08 14:09:01.321 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 14:09:03.005 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 14:23:49.075 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 14:23:50.510 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 14:30:40.957 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 14:30:43.289 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 14:31:29.293 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 14:31:30.072 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 14:33:40.590 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 21228 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 14:33:40.594 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 14:33:41.235 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 14:33:41.242 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 14:33:41.243 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 14:33:41.243 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 14:33:41.244 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 14:33:41.244 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 14:33:41.244 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 14:33:41.245 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 14:33:42.288 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 14:33:42.368 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 14:33:42.368 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1735 ms
+2022-11-08 14:33:42.662 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 14:33:42.683 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 14:33:42.690 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.612 seconds (JVM running for 3.471)
+2022-11-08 14:33:42.692 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 14:33:42.692 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 14:33:48.603 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 14:33:48.603 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 14:33:48.604 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-11-08 14:34:03.088 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 14504 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 14:34:03.090 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 14:34:03.699 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 14:34:03.706 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 14:34:03.706 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 14:34:03.707 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 14:34:03.708 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 14:34:03.708 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 14:34:03.708 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 14:34:03.709 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 14:34:04.755 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 14:34:04.830 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 14:34:04.830 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1707 ms
+2022-11-08 14:34:05.084 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 14:34:05.097 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 14:34:05.104 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.453 seconds (JVM running for 3.423)
+2022-11-08 14:34:05.105 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 14:34:05.106 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 14:35:01.999 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 16984 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 14:35:02.001 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 14:35:02.552 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 14:35:02.559 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 14:35:02.559 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 14:35:02.560 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 14:35:02.561 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 14:35:02.561 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 14:35:02.561 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 14:35:02.562 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 14:35:03.617 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 14:35:03.689 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 14:35:03.689 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1655 ms
+2022-11-08 14:35:03.934 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 14:35:03.947 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 14:35:03.954 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.374 seconds (JVM running for 3.3)
+2022-11-08 14:35:03.956 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 14:35:03.956 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 14:35:07.632 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 14:35:07.632 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 14:35:07.633 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-11-08 14:35:07.689 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 14:35:14.447 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：123
+2022-11-08 14:35:33.421 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 14:35:47.288 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 14:35:47.289 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 14:35:54.608 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 16560 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 14:35:54.611 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 14:35:55.422 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 14:35:55.429 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 14:35:55.429 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 14:35:55.430 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 14:35:55.431 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 14:35:55.431 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 14:35:55.431 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 14:35:55.432 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 14:35:56.487 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 14:35:56.556 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 14:35:56.557 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1908 ms
+2022-11-08 14:35:56.828 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 14:35:56.839 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 14:35:56.847 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.824 seconds (JVM running for 3.774)
+2022-11-08 14:35:56.849 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 14:35:56.850 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 14:36:24.814 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 14:36:24.815 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 14:36:24.815 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2022-11-08 14:36:24.881 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 14:36:24.887 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：Hello World
+2022-11-08 14:36:33.320 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：123
+2022-11-08 14:36:34.029 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 14:36:34.030 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：Hello World
+2022-11-08 14:36:38.789 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：123
+2022-11-08 14:36:39.108 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：123
+2022-11-08 14:36:39.334 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：123
+2022-11-08 14:36:40.065 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：123
+2022-11-08 14:37:01.384 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 14:37:01.384 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 14:39:03.414 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 14:39:03.416 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：Hello World
+2022-11-08 14:39:08.016 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：123
+2022-11-08 14:39:10.038 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 15:02:04.783 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 15:02:15.149 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 15:02:28.615 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 15:02:28.617 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：Hello World
+2022-11-08 15:02:50.716 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 15:02:58.404 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 15:02:58.405 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：Hello World
+2022-11-08 15:04:44.306 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 15:04:47.784 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 11908 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 15:04:47.786 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 15:04:48.485 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 15:04:48.492 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 15:04:48.492 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 15:04:48.492 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 15:04:48.494 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 15:04:48.494 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 15:04:48.494 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 15:04:48.494 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 15:04:49.544 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 15:04:49.615 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 15:04:49.615 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1785 ms
+2022-11-08 15:04:49.876 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 15:04:49.905 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 15:04:49.912 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.682 seconds (JVM running for 3.46)
+2022-11-08 15:04:49.914 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 15:04:49.914 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 15:04:51.841 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 15:04:51.841 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 15:04:51.842 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2022-11-08 15:04:59.467 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 15:05:09.641 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 15:05:31.522 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 4664 (D:\Program Files\apache-maven-3.6.0\repository\org\springframework\boot\spring-boot-starter-parent\2.5.10\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-08 15:05:31.524 INFO  com.gznx.config.BootstrapApplication              :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-11-08 15:05:32.160 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-11-08 15:05:32.168 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-08 15:05:32.168 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-08 15:05:32.169 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-11-08 15:05:32.170 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-08 15:05:32.170 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-08 15:05:32.170 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-08 15:05:32.171 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-08 15:05:33.226 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-08 15:05:33.299 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-08 15:05:33.299 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1742 ms
+2022-11-08 15:05:33.554 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-11-08 15:05:33.585 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-08 15:05:33.593 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.515 seconds (JVM running for 3.429)
+2022-11-08 15:05:33.595 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-08 15:05:33.595 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8080
+2022-11-08 15:15:09.360 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-08 15:15:09.360 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-08 15:15:09.361 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-11-08 15:15:09.417 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 15:15:09.422 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：Hello World
+2022-11-08 15:15:12.239 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 15:15:12.309 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 15:15:12.309 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 15:15:13.636 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 15:15:16.622 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 15:15:19.634 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 15:15:22.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 15:15:22.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 15:15:22.631 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 15:15:22.631 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 15:15:22.644 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 16:16:51.875 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:16:53.493 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:16:53.494 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：Hello World
+2022-11-08 16:16:57.631 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:19:32.867 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:19:32.880 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:19:32.882 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：Hello World
+2022-11-08 16:19:38.912 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:19:41.124 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:19:41.137 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:19:41.138 INFO  com.gznx.websocket.LogMessageHandler              :39   [32m                  [0;39m 收到用户[admin]发送的消息：Hello World
+2022-11-08 16:19:42.961 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:21:34.839 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:21:34.839 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:28:42.913 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:28:45.416 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:28:45.711 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:28:58.547 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:32:35.018 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:37:39.532 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:37:39.536 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:37:41.363 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:37:41.715 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:38:06.166 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:38:06.464 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:38:10.448 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:38:10.737 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:38:21.892 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:38:21.895 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:38:31.775 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:38:32.094 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:38:36.965 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:38:37.444 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:39:49.609 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:39:49.903 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:51:22.695 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:51:22.698 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:51:22.713 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:51:22.715 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:51:31.752 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:51:31.755 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:52:07.068 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:52:07.399 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:52:51.053 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:52:51.060 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:52:53.212 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:52:53.514 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:53:37.688 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:53:37.690 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:53:39.660 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:53:40.132 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:53:40.929 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:53:41.219 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:53:44.858 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 16:53:44.917 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:53:44.918 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 16:53:46.126 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:53:49.125 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:53:52.130 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:53:55.136 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:53:55.136 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:53:55.136 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 16:53:55.137 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 16:53:55.153 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 16:54:12.663 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:54:12.665 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:56:40.443 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:56:40.913 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:56:43.746 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:56:44.053 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:56:44.721 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 16:56:44.775 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:56:44.776 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 16:56:46.136 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:56:49.136 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:56:52.137 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:56:52.471 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:56:52.783 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:56:53.490 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:56:53.785 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:56:54.360 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 16:56:54.417 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:56:54.418 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 16:56:56.125 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:56:56.126 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 请求超时。
+2022-11-08 16:56:56.126 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:56:56.126 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 16:56:56.126 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 3，丢失 = 1 (25% 丢失)，
+2022-11-08 16:56:56.140 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 16:56:59.128 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:57:02.137 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:57:05.129 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:57:05.129 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:57:05.130 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 16:57:05.130 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 16:57:05.141 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 16:57:16.144 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:57:16.147 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:57:17.152 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:57:17.460 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:57:38.157 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:57:38.160 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:57:40.436 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:57:40.439 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:57:43.953 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:57:44.251 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:57:45.966 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 16:57:46.026 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:57:46.026 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 16:57:48.634 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:57:51.636 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:57:54.633 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:57:57.629 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:57:57.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:57:57.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 16:57:57.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 16:57:57.648 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 16:58:17.361 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:58:17.364 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:58:24.426 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 16:58:24.485 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:58:24.485 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 16:58:27.132 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:58:30.125 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:58:33.130 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:58:36.122 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:58:36.122 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:58:36.123 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 16:58:36.123 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 16:58:36.135 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 16:59:18.397 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 16:59:18.719 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 16:59:22.263 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 16:59:22.318 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:59:22.318 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 16:59:25.122 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:59:28.131 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:59:31.123 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:59:34.135 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 16:59:34.135 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 16:59:34.136 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 16:59:34.136 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 16:59:34.147 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 17:00:01.073 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:00:01.078 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 17:06:50.878 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:06:50.881 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 17:13:03.746 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:13:03.749 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 17:13:06.864 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:13:06.866 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 17:13:16.018 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:13:16.020 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 17:37:51.385 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:37:51.388 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 17:38:37.708 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:38:37.712 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 17:38:41.059 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:38:41.450 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 17:38:42.652 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 17:38:42.712 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 17:38:42.713 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 17:38:44.131 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 17:38:47.122 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 17:38:50.134 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 17:38:53.122 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 17:38:53.122 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 17:38:53.122 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 17:38:53.123 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 17:38:53.134 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 17:39:58.478 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:39:58.481 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 17:39:59.760 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:40:00.081 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 17:40:02.377 INFO  com.gznx.service.ExecutorService                  :27   [32m                  [0;39m 开始执行：ping 10.128.103.45
+2022-11-08 17:40:02.438 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 17:40:02.439 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 正在 Ping 10.128.103.45 具有 32 字节的数据:
+2022-11-08 17:40:03.627 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 17:40:06.628 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 17:40:09.636 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 17:40:12.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 来自 10.128.103.44 的回复: 无法访问目标主机。
+2022-11-08 17:40:12.630 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 
+2022-11-08 17:40:12.631 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m 10.128.103.45 的 Ping 统计信息:
+2022-11-08 17:40:12.631 INFO  com.gznx.service.ExecutorService                  :42   [32m                  [0;39m     数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+2022-11-08 17:40:12.642 INFO  com.gznx.service.ExecutorService                  :48   [32m                  [0;39m ping 10.128.103.45 执行完毕！exit code: 0
+2022-11-08 17:40:18.130 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
+2022-11-08 17:40:18.132 INFO  com.gznx.websocket.LogMessageHandler              :27   [32m                  [0;39m 用户[admin]成功建立连接！
+2022-11-08 18:11:59.286 INFO  com.gznx.websocket.LogMessageHandler              :86   [32m                  [0;39m 用户[admin]连接已成功关闭！
