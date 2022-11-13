@@ -1,5 +1,6 @@
 package com.gznx.service;
 
+import com.gznx.websocket.Constant;
 import com.gznx.websocket.LogMessageHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,11 +32,11 @@ public class ExecutorService {
     @Resource
     private LogMessageHandler logMessageHandler;
 
-    private void process(String userId, String shellPath, InputStream is, String charser, Process p) {
+    private void process(String userId, String commandWithType, InputStream is, String charser, Process p) {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                LOG.info("开始执行：" + shellPath);
+                LOG.info("开始执行：" + commandWithType);
                 int exitValue = 1;
                 try {
                     int retry = 5;
@@ -64,14 +65,14 @@ public class ExecutorService {
                     }
                     // 等待脚本执行完毕
                     exitValue = p.waitFor();
-                    LOG.info(shellPath + " 执行完毕！exit code: " + exitValue);
+                    LOG.info(commandWithType + " 执行完毕！exit code: " + exitValue);
                 } catch (IOException e) {
                     LOG.error("日志流读取异常！", e);
                 } catch (InterruptedException e) {
-                    LOG.error(shellPath + " 执行线程中断！", e);
+                    LOG.error(commandWithType + " 执行线程中断！", e);
                 } finally {
-                    threadMap.remove(shellPath);
-                    startTimeMap.remove(shellPath);
+                    threadMap.remove(commandWithType);
+                    startTimeMap.remove(commandWithType);
                     try {
                         is.close();
                         if (p != null) {
@@ -87,33 +88,34 @@ public class ExecutorService {
             }
         });
         thread.start();
-        threadMap.put(shellPath, thread);
+        threadMap.put(commandWithType, thread);
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        startTimeMap.put(shellPath, dateFormat.format(new Date()));
+        startTimeMap.put(commandWithType, dateFormat.format(new Date()));
     }
 
 
-    public Map execShell(String userId, String shellPath, String charser) {
-        String[] shellArgs = shellPath.replace("\\", "/").split("\\s+");
+    public Map execCommand(String userId, String command, String type, String charser) {
+        String[] commandArgs = command.replace("\\", "/").split("\\s+");
         Map result = new HashMap();
-        if (threadMap.get(shellPath) != null) {
+        String commandWithType = type + Constant.COMMAND_SEPARATOR + command;
+        if (threadMap.get(commandWithType) != null) {
             result.put("success", false);
             result.put("message", "脚本正在执行，请勿重复调用！");
             return result;
         }
         try {
-            ProcessBuilder pb = new ProcessBuilder(shellArgs);
+            ProcessBuilder pb = new ProcessBuilder(commandArgs);
             pb.redirectErrorStream(true); // 将错误流合并到输入流中
             Process p = pb.start();
             InputStream is = p.getInputStream();
 
-            process(userId, shellPath, is, charser, p);
+            process(userId, commandWithType, is, charser, p);
 
             result.put("success", true);
             result.put("message", "脚本调用成功！");
             return result;
         } catch (Exception e) {
-            LOG.error(shellPath + " 脚本调用异常！", e);
+            LOG.error(command + " 脚本调用异常！", e);
             result.put("success", false);
             result.put("message", e.getMessage());
             return result;
@@ -121,8 +123,8 @@ public class ExecutorService {
     }
 
     // 中断脚本执行
-    public boolean interruptedExec(String shellPath) {
-        Thread thread = threadMap.get(shellPath);
+    public boolean interruptedExec(String commandWithType) {
+        Thread thread = threadMap.get(commandWithType);
         if (thread != null && !thread.isInterrupted()) {
             thread.interrupt();
             return true;

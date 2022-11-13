@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // axios 全局配置
-axios.defaults.baseURL = process.env.VUE_APP_API_ROOT;
+axios.defaults.baseURL = process.env.VUE_APP_HOST;
 axios.defaults.timeout = 1000 * 10;
 axios.defaults.responseType = 'json';
 axios.defaults.withCredentials = true; // 跨域时携带cookies
