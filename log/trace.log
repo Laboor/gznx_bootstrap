@@ -496,3 +496,24 @@ java.io.IOException: 拒绝访问。
 2022-11-14 16:20:59.021 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-11-14 16:20:59.021 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
 2022-11-14 16:20:59.022 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-11-14 16:25:19.608 INFO  com.gznx.config.BootstrapApplication              :55   [32m                  [0;39m Starting BootstrapApplication using Java 1.8.0_191 on DESKTOP-PEBHUG8 with PID 9792 (F:\work\code\bootstrap\target\classes started by DELL in F:\work\code\bootstrap)
+2022-11-14 16:25:19.611 INFO  com.gznx.config.BootstrapApplication              :675  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2022-11-14 16:25:20.191 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-11-14 16:25:20.191 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m An older version [1.2.17] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2022-11-14 16:25:20.192 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m Loaded Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+2022-11-14 16:25:20.192 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2022-11-14 16:25:20.192 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-11-14 16:25:21.251 INFO  org.apache.catalina.core.AprLifecycleListener     :173  [32m                  [0;39m OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+2022-11-14 16:25:21.256 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-11-14 16:25:21.257 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-11-14 16:25:21.257 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-11-14 16:25:21.328 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-11-14 16:25:21.329 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1689 ms
+2022-11-14 16:25:21.557 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-11-14 16:25:21.571 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-14 16:25:21.578 INFO  com.gznx.config.BootstrapApplication              :61   [32m                  [0;39m Started BootstrapApplication in 2.385 seconds (JVM running for 3.181)
+2022-11-14 16:25:21.580 INFO  com.gznx.config.BootstrapApplication              :18   [32m                  [0;39m Bootstrap 启动成功！！
+2022-11-14 16:25:21.580 INFO  com.gznx.config.BootstrapApplication              :19   [32m                  [0;39m 地址：	http://localhost:8081
+2022-11-14 16:26:31.390 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-14 16:26:31.390 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-11-14 16:26:31.391 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
