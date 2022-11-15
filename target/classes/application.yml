@@ -1,8 +1,0 @@
-server:
-  # 端口配置
-  port: 8081
-  servlet:
-    # 应用的访问路径
-    context-path: /
-    multipart:
-      enable: true
