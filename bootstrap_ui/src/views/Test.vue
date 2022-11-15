@@ -11,6 +11,13 @@ export default {
   components: {
     Uploader,
   },
+  data() {
+    return {
+      list: []
+    }
+  },
+  methods: {
+  }
 };
 </script>
 
