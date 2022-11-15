@@ -4,5 +4,6 @@ export default {
   getExecLiat: '/command/list',
   uploadFile: '/file/upload',
   checkFile: '/file/check',
-  mergeFile: '/file/merge'
+  mergeFile: '/file/merge',
+  cancelUpload: 'file/cancel',
 };

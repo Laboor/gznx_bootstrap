@@ -82,4 +82,25 @@ public class UploadController {
         }
         return resp;
     }
+
+    @PostMapping("/cancel")
+    public CommonResp cancelUpload(@RequestBody Map<String, String> req) {
+        String uploadDir = req.get("uploadDir");
+        String fileMd5 = req.get("fileMd5");
+        CommonResp<String> resp = new CommonResp<>();
+        try {
+            if (StringUtils.hasText(uploadDir) && StringUtils.hasText(fileMd5)) {
+                boolean result = uploadService.deleteChunksDir(uploadDir, fileMd5);
+                resp.setSuccess(result);
+                resp.setMessage(result ? "chunks文件删除成功！" : "文件不存在！");
+            } else {
+                resp.setSuccess(false);
+                resp.setMessage("请求缺少必要参数！");
+            }
+        } catch (Exception e) {
+            resp.setSuccess(false);
+            resp.setMessage(e.getMessage());
+        }
+        return resp;
+    }
 }

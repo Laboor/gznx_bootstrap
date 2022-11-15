@@ -20,6 +20,7 @@ public class UploadService {
     public static final int DEFAULT_FILE_NAME_LENGTH = 100; //文件名最长长度
 
     private String formatUploadPath(String uploadDir) {
+        uploadDir = uploadDir.replace("\\", "/");
         if (File.separator.equals(uploadDir.substring(uploadDir.length() - 1))) {
             return uploadDir;
         }
@@ -118,6 +119,25 @@ public class UploadService {
             }
         }
         return true;
+    }
+
+    public boolean deleteChunksDir(String uploadDir, String fileMd5) throws Exception {
+        uploadDir = formatUploadPath(uploadDir);
+        try {
+            File chunksDir = new File(uploadDir + fileMd5);
+            File[] chunks = chunksDir.listFiles();
+            for (File chunk : chunks) {
+                // 删除所有chunk
+                chunk.delete();
+            }
+            // 删除文件夹
+            if (chunksDir != null && chunksDir.exists()) {
+                return chunksDir.delete();
+            }
+        } catch (Exception e) {
+            throw e;
+        }
+        return false;
     }
 
     private File getAbsoluteFile(String uploadDir, String fileName) throws IOException {
