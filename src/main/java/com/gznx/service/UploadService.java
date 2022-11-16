@@ -107,11 +107,11 @@ public class UploadService {
             throw e;
         } finally {
             try {
-                if (outChannel != null) {
-                    outChannel.close();
-                }
                 if (chunksDir != null && chunksDir.exists()) {
                     chunksDir.delete(); // 删除分片所在的文件夹
+                }
+                if (outChannel != null) {
+                    outChannel.close();
                 }
             } catch (IOException e) {
                 LOG.error("关闭输出流异常或删除chunks文件夹异常！", e);

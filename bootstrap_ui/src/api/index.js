@@ -5,5 +5,5 @@ export default {
   uploadFile: '/file/upload',
   checkFile: '/file/check',
   mergeFile: '/file/merge',
-  cancelUpload: 'file/cancel',
+  cancelUpload: '/file/cancel',
 };
