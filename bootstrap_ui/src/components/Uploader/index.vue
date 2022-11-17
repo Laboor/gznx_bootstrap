@@ -25,16 +25,7 @@ export default {
 			var errorList = that.getFiles("error");
 			var interruptList = that.getFiles("interrupt");
 			var totalList = progressList.concat(errorList).concat(interruptList);
-			var fileList = [];
-			for (var file of totalList) {
-				fileList.push({
-					uploadDir: file.uploadDir,
-					fileMd5: file.md5,
-				});
-			}
-			that.axios.post(api.cancelUpload, {
-				fileList: JSON.stringify(fileList),
-			});
+			that.deleteChunksFiles(totalList);
 		};
 	},
 	methods: {
@@ -56,7 +47,7 @@ export default {
 				formData: { uploadDir: "" }, // 数据荷载
 				chunked: true, //分片上传
 				chunkSize: 5 * 1024 * 1024, //分片大小 5M
-				duplicate: true,
+				duplicate: true, // 文件去重
 				fileSizeLimit: this.fileSizeLimit, // 验证文件总大小是否超出限制, 超出则不允许加入队列
 				fileSingleSizeLimit: this.fileSingleSizeLimit, // 单文件大小
 			});
@@ -70,7 +61,7 @@ export default {
 			var that = this;
 			var deferred = WebUploader.Deferred();
 			// 计算文件的唯一标记MD5，用于断点续传
-			that.uploader.md5File(file, 0, 3 * 1024 * 1024).then(async function(md5Value) {
+			that.uploader.md5File(file, 0, 3 * 1024 * 1024).then(function(md5Value) {
 				file.md5 = md5Value || "";
 				file.uid = WebUploader.Base.guid();
 				// 配置文件上传参数
@@ -80,7 +71,7 @@ export default {
 					uploadDir: file.uploadDir,
 				});
 				// 判断文件是否上传过，是否存在分片，断点续传
-				await that.axios
+				that.axios
 					.post(api.checkFile, {
 						fileName: file.name,
 						fileMd5: file.md5,
@@ -97,9 +88,12 @@ export default {
 							// 文件上传中断过，返回当前已经上传到的下标
 							file.indexcode = resultCode;
 						}
+						// 获取文件信息后进入下一步
+						deferred.resolve();
+					})
+					.catch((e) => {
+						deferred.reject(e.message);
 					});
-				// 获取文件信息后进入下一步
-				deferred.resolve();
 			});
 			return deferred.promise();
 		},
@@ -123,14 +117,18 @@ export default {
 		},
 		afterSendFile(file) {
 			// 如果所有分块上传成功，则通知后台合并分块
-			this.axios
+			var that = this;
+			that.axios
 				.post(api.mergeFile, {
 					fileName: file.name,
 					fileMd5: file.md5,
 					uploadDir: file.uploadDir,
 				})
 				.then((res) => {
-					console.log(res);
+					// 合并失败删除chunks文件夹
+					if (!res.data.success) {
+						that.deleteChunksFiles([file]);
+					}
 				});
 		},
 		fileQueued(file) {
@@ -187,12 +185,16 @@ export default {
 		},
 		cancelFile(file) {
 			this.uploader.cancelFile(file);
-			var fileList = [
-				{
+			this.deleteChunksFiles([file]);
+		},
+		deleteChunksFiles(files) {
+			var fileList = [];
+			for (var file of files) {
+				fileList.push({
 					uploadDir: file.uploadDir,
 					fileMd5: file.md5,
-				},
-			];
+				});
+			}
 			this.axios.post(api.cancelUpload, {
 				fileList: JSON.stringify(fileList),
 			});

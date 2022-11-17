@@ -99,11 +99,11 @@ public class LogMessageHandler implements WebSocketHandler {
 
     private String getUserId(WebSocketSession session) {
         try {
-            String userId = (String) session.getAttributes().get(Constant.WEBSOCKET_USERNAME);
+            String userId = (String) session.getAttributes().get(Constant.WEBSOCKET_NAME);
             return userId;
         } catch (Exception e) {
             LOG.error("获取websocket用户信息失败！", e);
         }
-        return  null;
+        return null;
     }
 }

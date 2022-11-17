@@ -1,4 +1,5 @@
 export default {
+  websocket: '/webSocketServer',
   execCommand: '/command/exec',
   interruptCommand: '/command/interrupt',
   getExecLiat: '/command/list',

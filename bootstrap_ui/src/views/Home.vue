@@ -113,7 +113,7 @@
 				<el-button size="small" type="primary" @click="handleSubmit">确认</el-button>
 			</span>
 		</el-dialog>
-		<Uploader
+		<uploader
 			ref="uploader"
 			@file-queued="handleFileQueued"
 			@progress="handleUploadProgress"
@@ -134,9 +134,7 @@ export default {
 	},
 	data() {
 		return {
-			//C:/Users/Administrator/Desktop/upload_test
 			command: "ping 10.128.103.45",
-			// command: '',
 			commandType: "1",
 			commandTypeOpts: [
 				{
@@ -189,10 +187,8 @@ export default {
 		execCommand() {
 			return this.axios
 				.post(api.execCommand, {
-					userId: "admin",
-					command: this.command,
 					type: this.commandTypeOpt.type,
-					charser: "gb2312",
+					commandStr: this.command,
 				})
 				.then((res) => {
 					if (res.data.success) {
@@ -219,16 +215,14 @@ export default {
 					isUploading: true,
 				});
 				this.uploader.upload();
-			} else {
-				this.$message.error("文件路径或命令不能为空！");
 			}
 		},
 		handleInterruptCommand(scope, row) {
 			var that = this;
 			this.axios
 				.post(api.interruptCommand, {
-					command: row.command,
 					type: row.type,
+					commandStr: row.command,
 				})
 				.then((res) => {
 					if (res.data.success) {
@@ -254,6 +248,10 @@ export default {
 					if (that.isPrintLog == "1") {
 						var url = that.$router.resolve({
 							path: "/LogView",
+							query: {
+								type: that.commandTypeOpt.type,
+								command: that.command,
+							},
 						});
 						var windowName = "_" + that.command;
 						if (window.localStorage.getItem(windowName) == url.href) {
@@ -398,7 +396,7 @@ export default {
 			});
 		},
 		handleRetryUpload(scope, row) {
-      row.file.setStatus("error");
+			row.file.setStatus("error");
 			this.uploader.retry(row.file);
 		},
 		setUploadTableDataByFileId(id, obj) {
@@ -563,4 +561,7 @@ export default {
 ::v-deep .el-table .cell {
 	overflow: unset;
 }
+/* ::v-deep .el-table .el-table__cell {
+  padding: 8px;
+} */
 </style>

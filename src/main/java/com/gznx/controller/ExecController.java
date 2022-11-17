@@ -1,12 +1,12 @@
 package com.gznx.controller;
 
+import com.gznx.domain.CommandInfo;
 import com.gznx.response.CommonResp;
 import com.gznx.service.ExecutorService;
-import com.gznx.websocket.Constant;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,14 +20,14 @@ public class ExecController {
 
     @GetMapping("/list")
     public CommonResp list(@RequestParam Map<String, String> req) {
-        Map<String, String> startTimeMap = executorService.getStartTimeMap();
+        Map<String, CommandInfo> commandInfoMap = executorService.getCommandInfoMap();
         List<Map<String, String>> resultList = new ArrayList<>();
-        for (String command : startTimeMap.keySet()) {
+        for (String key : commandInfoMap.keySet()) {
+            CommandInfo commandInfo = commandInfoMap.get(key);
             Map<String, String> result = new HashMap<>();
-            int index = command.indexOf(Constant.COMMAND_SEPARATOR);
-            result.put("command", command.substring(index + 1));
-            result.put("type", command.substring(0, index));
-            result.put("startTime", startTimeMap.get(command));
+            result.put("command", commandInfo.getCommandStr());
+            result.put("type", commandInfo.getType());
+            result.put("startTime", commandInfo.getStartTime());
             resultList.add(result);
         }
         CommonResp<List> resp = new CommonResp<>();
@@ -38,33 +38,29 @@ public class ExecController {
     }
 
     @PostMapping("/exec")
-    public CommonResp execCommand(@RequestBody Map<String, String> req) {
-        String userId = req.get("userId");
-        String command = req.get("command");
-        String type = req.get("type");
-        String charser = req.get("charser");
-        Map result = null;
-        if (StringUtils.hasText(userId) && StringUtils.hasText(command) && StringUtils.hasText(type)) {
-            if (!StringUtils.hasText(charser)) {
-                charser = "utf-8";
+    public CommonResp execCommand(@Valid @RequestBody CommandInfo commandInfo) {
+        CommonResp<String> resp = new CommonResp<>();
+        try {
+            if (executorService.getCommandInfoMap().get(commandInfo.getId()) != null) {
+                resp.setSuccess(false);
+                resp.setMessage("脚本正在执行，请勿重复调用！");
+                return resp;
             }
-            result = executorService.execCommand(userId, command, type, charser);
+            boolean result = executorService.execCommand(commandInfo);
+            resp.setSuccess(result);
+            resp.setMessage(result ? "脚本调用成功！" : "脚本调用异常！");
+            return resp;
+        } catch (Exception e) {
+            resp.setSuccess(false);
+            resp.setMessage("脚本调用异常，异常原因：" + e.getMessage());
+            return resp;
         }
-        CommonResp<Map> resp = new CommonResp<>();
-        resp.setSuccess((boolean) result.get("success"));
-        resp.setMessage((String) result.get("message"));
-        return resp;
     }
 
     @PostMapping("/interrupt")
-    public CommonResp interruptShell(@RequestBody Map<String, String> req) {
-        String command = req.get("command");
-        String type = req.get("type");
-        boolean result = false;
-        if (StringUtils.hasText(command) && StringUtils.hasText(type)) {
-            result = executorService.interruptedExec(type + Constant.COMMAND_SEPARATOR + command);
-        }
+    public CommonResp interruptShell(@Valid @RequestBody CommandInfo commandInfo) {
         CommonResp<Map> resp = new CommonResp<>();
+        boolean result = executorService.interruptedExec(commandInfo.getId());
         String msg = result ? "脚本执行中断成功！" : "脚本执行中断失败，不存在该任务或任务已中断！";
         resp.setSuccess(result);
         resp.setMessage(msg);
