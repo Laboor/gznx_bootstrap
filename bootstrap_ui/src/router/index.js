@@ -16,11 +16,6 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "LogView" */ '@/views/LogView.vue'),
   },
-  {
-    path: '/test',
-    name: 'test',
-    component: () => import(/* webpackChunkName: "test" */ '@/views/Test.vue'),
-  },
 ];
 
 const router = new VueRouter({

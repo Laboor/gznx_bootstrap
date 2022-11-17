@@ -5,6 +5,7 @@ import com.gznx.websocket.LogMessageHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.socket.WebSocketSession;
 
 import javax.annotation.Resource;
@@ -44,7 +45,11 @@ public class ExecutorService {
                     }
                     // 是否传输日志信息
                     if (session != null && session.isOpen()) {
-                        BufferedReader br = new BufferedReader(new InputStreamReader(is, Charset.forName("gb2312")));
+                        String charset = commandInfo.getCharset();
+                        if (!StringUtils.hasText(charset)) {
+                            charset = "UTF-8";
+                        }
+                        BufferedReader br = new BufferedReader(new InputStreamReader(is, Charset.forName(charset)));
                         String line = null;
                         while ((line = br.readLine()) != null) {
                             // 中断处理

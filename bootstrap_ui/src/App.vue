@@ -10,6 +10,11 @@
   margin: 0;
 }
 
+html, body {
+  position: relative;
+  height: 100%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
