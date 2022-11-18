@@ -14,6 +14,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/command")
+@CrossOrigin
 public class ExecController {
     @Resource
     private ExecutorService executorService;
