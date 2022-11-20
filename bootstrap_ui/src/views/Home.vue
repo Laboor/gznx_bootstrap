@@ -673,6 +673,8 @@ export default {
   position: relative;
   margin-top: 50px;
   width: 100px;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 .main-input-with-select {
   width: 100%;
@@ -826,6 +828,7 @@ export default {
   width: 23px;
   margin-right: 10px;
   vertical-align: text-bottom;
+  -webkit-user-drag: none;
 }
 .history-list {
   position: absolute;
