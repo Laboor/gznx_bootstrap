@@ -20,7 +20,7 @@ public class ExecController {
     private ExecutorService executorService;
 
     @GetMapping("/list")
-    public CommonResp list(@RequestParam Map<String, String> req) {
+    public CommonResp list() {
         Map<String, CommandInfo> commandInfoMap = executorService.getCommandInfoMap();
         List<Map<String, String>> resultList = new ArrayList<>();
         for (String key : commandInfoMap.keySet()) {
@@ -39,7 +39,8 @@ public class ExecController {
     }
 
     @PostMapping("/exec")
-    public CommonResp execCommand(@Valid @RequestBody CommandInfo commandInfo) {
+    public CommonResp execCommand(@Valid @RequestBody CommandInfo commandInfoReq) {
+        CommandInfo commandInfo = executorService.initCommandInfo(commandInfoReq);
         CommonResp<String> resp = new CommonResp<>();
         try {
             if (executorService.getCommandInfoMap().get(commandInfo.getId()) != null) {
@@ -59,7 +60,8 @@ public class ExecController {
     }
 
     @PostMapping("/interrupt")
-    public CommonResp interruptShell(@Valid @RequestBody CommandInfo commandInfo) {
+    public CommonResp interruptShell(@Valid @RequestBody CommandInfo commandInfoReq) {
+        CommandInfo commandInfo = executorService.initCommandInfo(commandInfoReq);
         CommonResp<Map> resp = new CommonResp<>();
         boolean result = executorService.interruptedExec(commandInfo.getId());
         String msg = result ? "脚本执行中断成功！" : "脚本执行中断失败，不存在该任务或任务已中断！";

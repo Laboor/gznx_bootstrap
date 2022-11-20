@@ -1,6 +1,8 @@
 package com.gznx.service;
 
 import com.gznx.domain.CommandInfo;
+import com.gznx.utils.Helper;
+import com.gznx.utils.Md5Utils;
 import com.gznx.websocket.LogMessageHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +30,7 @@ public class ExecutorService {
     @Resource
     private LogMessageHandler logMessageHandler;
 
+    // 新建线程处理脚本
     private void process(CommandInfo commandInfo, InputStream is, Process p) {
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -88,13 +91,15 @@ public class ExecutorService {
         });
         thread.start();
         commandInfo.setExecThread(thread);
-        commandInfo.setStartTime(new Date());
+        commandInfo.setStartTime(Helper.dateFormat(new Date()));
         commandInfoMap.put(commandInfo.getId(), commandInfo);
     }
 
+    // 执行脚本
     public boolean execCommand(CommandInfo commandInfo) throws IOException {
         try {
-            ProcessBuilder pb = new ProcessBuilder(commandInfo.getCommandArgs());
+            String[] args = commandInfo.getCommandStr().replace("\\", "/").split("\\s+");
+            ProcessBuilder pb = new ProcessBuilder(args);
             pb.redirectErrorStream(true); // 将错误流合并到输入流中
             Process p = pb.start();
             InputStream is = p.getInputStream();
@@ -117,4 +122,14 @@ public class ExecutorService {
         }
         return false;
     }
+
+    // 初始化对象
+    public CommandInfo initCommandInfo(CommandInfo commandInfo) {
+        CommandInfo newCommandInfo = commandInfo;
+        newCommandInfo.setType(commandInfo.getType());
+        newCommandInfo.setCommandStr(commandInfo.getCommandStr().trim());
+        newCommandInfo.setId(Md5Utils.hash(commandInfo.getType() + commandInfo.getCommandStr().trim()));
+        return newCommandInfo;
+    }
+
 }
