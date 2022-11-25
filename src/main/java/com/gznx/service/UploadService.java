@@ -51,7 +51,7 @@ public class UploadService {
         String uploadDir = formatUploadPath(uploadFileInfo.getUploadDir());
         int fileNamelength = multipartFile.getOriginalFilename().length();
         if (fileNamelength > DEFAULT_FILE_NAME_LENGTH) {
-            throw new Exception("[" + fileNamelength + "]文件名超过最大长度：" + DEFAULT_FILE_NAME_LENGTH);
+            throw new Exception("[" + multipartFile.getOriginalFilename() + "]文件名超过最大长度：" + DEFAULT_FILE_NAME_LENGTH);
         }
         File fileChunk;
         String chunkIndex = uploadFileInfo.getChunk();
@@ -60,10 +60,12 @@ public class UploadService {
             // 分片上传
             fileChunk = getAbsoluteFile(uploadDir + fileMd5, chunkIndex);
             FileUtils.copyInputStreamToFile(multipartFile.getInputStream(), fileChunk);
+            LOG.info("文件分片[" + chunkIndex + "]上传成功！路径：" + uploadDir + fileMd5);
         } else {
             // 不分片上传
             fileChunk = getAbsoluteFile(uploadDir, multipartFile.getOriginalFilename());
             multipartFile.transferTo(fileChunk);
+            LOG.info("文件[" + multipartFile.getOriginalFilename() + "]上传成功！路径：" + uploadDir);
         }
         return fileChunk.getAbsolutePath();
     }
@@ -71,6 +73,7 @@ public class UploadService {
     // 分片合并
     public boolean fileMeger(UploadFileInfo uploadFileInfo) throws Exception {
         String uploadDir = formatUploadPath(uploadFileInfo.getUploadDir());
+        String fileName = uploadFileInfo.getFileName();
         FileChannel outChannel = null;
         File chunksDir = null;
         try {
@@ -92,7 +95,7 @@ public class UploadService {
                 }
             });
             // 合并文件
-            File outputFile = getAbsoluteFile(uploadDir, uploadFileInfo.getFileName());
+            File outputFile = getAbsoluteFile(uploadDir, fileName);
             outChannel = new FileOutputStream(outputFile).getChannel();
             FileChannel inChannel = null;
             try {
@@ -103,8 +106,9 @@ public class UploadService {
                     // 删除分片
                     file.delete();
                 }
+                LOG.info("文件[" + fileName + "]合并成功！路径：" + uploadDir);
             } catch (Exception e) {
-                LOG.error("发生异常，文件合并失败 ，删除创建的文件！", e);
+                LOG.error("文件[" + fileName + "]合并失败，将删除创建的文件！路径：" + uploadDir, e);
                 outputFile.delete(); // 删除目标文件
                 chunksDir.delete();  // 删除chunks文件夹
                 throw e;
@@ -114,7 +118,7 @@ public class UploadService {
                 }
             }
         } catch (IOException e) {
-            LOG.error("创建目标文件异常！", e);
+            LOG.error("创建目标文件[" + fileName + "]异常！路径：" + uploadDir, e);
             throw e;
         } finally {
             try {
@@ -146,9 +150,14 @@ public class UploadService {
             }
             // 删除文件夹
             if (chunksDir != null && chunksDir.exists()) {
-                return chunksDir.delete();
+                boolean delSuccess = chunksDir.delete();
+                if (delSuccess) {
+                    LOG.info("删除临时文件夹[" + fileMd5 + "]成功！路径：" + uploadDir);
+                }
+                return delSuccess;
             }
         } catch (Exception e) {
+            LOG.error("删除[" + fileMd5 + "]文件夹异常！路径：" + uploadDir, e);
             throw e;
         }
         return false;

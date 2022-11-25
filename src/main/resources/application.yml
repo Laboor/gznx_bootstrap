@@ -6,3 +6,5 @@ server:
     context-path: /bootstrap
     multipart:
       enable: true
+    encoding:
+      force: true

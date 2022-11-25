@@ -31,7 +31,7 @@ public class ExecutorService {
     private LogMessageHandler logMessageHandler;
 
     // 新建线程处理脚本
-    private void process(CommandInfo commandInfo, InputStream is, Process p) {
+    private void process(CommandInfo commandInfo, InputStream is, Process process) {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -54,7 +54,7 @@ public class ExecutorService {
                         }
                         BufferedReader br = new BufferedReader(new InputStreamReader(is, Charset.forName(charset)));
                         String line = null;
-                        while ((line = br.readLine()) != null) {
+                        while ((line = br.readLine()) != null && process.isAlive()) {
                             // 中断处理
                             if (Thread.currentThread().isInterrupted()) {
                                 throw new InterruptedException("线程被手动中断");
@@ -67,7 +67,7 @@ public class ExecutorService {
                         }
                     }
                     // 等待脚本执行完毕
-                    exitValue = p.waitFor();
+                    exitValue = process.waitFor();
                     LOG.info(commandInfo.getCommandStr() + " 执行完毕！exit code: " + exitValue);
                 } catch (IOException e) {
                     LOG.error("日志流读取异常！", e);
@@ -77,11 +77,11 @@ public class ExecutorService {
                     commandInfoMap.remove(commandInfo.getId());
                     try {
                         is.close();
-                        if (p != null) {
-                            p.getInputStream().close();
-                            p.getErrorStream().close();
-                            p.getOutputStream().close();
-                            p.destroy();
+                        if (process != null && process.isAlive()) {
+                            process.getInputStream().close();
+                            process.getErrorStream().close();
+                            process.getOutputStream().close();
+                            process.destroy();
                         }
                     } catch (IOException e) {
                         LOG.error("日志流关闭异常！", e);
@@ -91,6 +91,7 @@ public class ExecutorService {
         });
         thread.start();
         commandInfo.setExecThread(thread);
+        commandInfo.setProcess(process);
         commandInfo.setStartTime(Helper.dateFormat(new Date()));
         commandInfoMap.put(commandInfo.getId(), commandInfo);
     }
@@ -114,10 +115,21 @@ public class ExecutorService {
     }
 
     // 中断脚本执行
-    public boolean interruptedExec(String commandId) {
-        Thread thread = commandInfoMap.get(commandId).getExecThread();
+    public boolean interruptedExec(String commandId) throws IOException {
+        CommandInfo commandInfo = commandInfoMap.get(commandId);
+        if (commandInfo == null) {
+            return false;
+        }
+        Thread thread = commandInfo.getExecThread();
         if (thread != null && !thread.isInterrupted()) {
             thread.interrupt();
+            Process process = commandInfo.getProcess();
+            if (process != null && process.isAlive()) {
+                process.getInputStream().close();
+                process.getErrorStream().close();
+                process.getOutputStream().close();
+                process.destroy();
+            }
             return true;
         }
         return false;

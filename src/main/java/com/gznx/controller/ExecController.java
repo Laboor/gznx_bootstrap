@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -59,7 +60,7 @@ public class ExecController {
     }
 
     @PostMapping("/interrupt")
-    public CommonResp interruptShell(@Valid @RequestBody CommandInfo commandInfoReq) {
+    public CommonResp interruptShell(@Valid @RequestBody CommandInfo commandInfoReq) throws IOException {
         CommandInfo commandInfo = executorService.initCommandInfo(commandInfoReq);
         CommonResp<Map> resp = new CommonResp<>();
         boolean result = executorService.interruptedExec(commandInfo.getId());

@@ -1,5 +1,7 @@
 package com.gznx.domain;
 
+import org.apache.tomcat.jni.Proc;
+
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
@@ -16,6 +18,8 @@ public class CommandInfo {
     private String startTime;
 
     private Thread execThread;
+
+    private Process process;
 
     private String charset;
 
@@ -59,6 +63,14 @@ public class CommandInfo {
         this.execThread = execThread;
     }
 
+    public Process getProcess() {
+        return process;
+    }
+
+    public void setProcess(Process process) {
+        this.process = process;
+    }
+
     public String getCharset() {
         return charset;
     }
@@ -72,17 +84,18 @@ public class CommandInfo {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CommandInfo that = (CommandInfo) o;
-        return Objects.equals(id, that.id) &&
-                Objects.equals(type, that.type) &&
-                Objects.equals(commandStr, that.commandStr) &&
-                Objects.equals(startTime, that.startTime) &&
-                Objects.equals(execThread, that.execThread) &&
-                Objects.equals(charset, that.charset);
+        return Objects.equals(getId(), that.getId()) &&
+                Objects.equals(getType(), that.getType()) &&
+                Objects.equals(getCommandStr(), that.getCommandStr()) &&
+                Objects.equals(getStartTime(), that.getStartTime()) &&
+                Objects.equals(getExecThread(), that.getExecThread()) &&
+                Objects.equals(getProcess(), that.getProcess()) &&
+                Objects.equals(getCharset(), that.getCharset());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, type, commandStr, startTime, execThread, charset);
+        return Objects.hash(getId(), getType(), getCommandStr(), getStartTime(), getExecThread(), getProcess(), getCharset());
     }
 
     @Override
@@ -93,6 +106,7 @@ public class CommandInfo {
                 ", commandStr='" + commandStr + '\'' +
                 ", startTime='" + startTime + '\'' +
                 ", execThread=" + execThread +
+                ", process=" + process +
                 ", charset='" + charset + '\'' +
                 '}';
     }
