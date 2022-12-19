@@ -94,6 +94,7 @@
             </template>
           </el-table-column>
         </el-table>
+
         <el-table
           v-show="commandType == '3'"
           :data="uploadTableData"
@@ -219,10 +220,12 @@
         </el-table>
       </div>
     </div>
+
     <div ref="pageFooter" class="footer">
       <img class="logo-mini" alt="logo" src="../assets/gzrc_logo.png" />
       <span>贵州农信 ©2022 脚本启动工具</span>
     </div>
+    
     <el-dialog
       title="确认信息"
       :visible.sync="confirmInfoDialog"
@@ -647,8 +650,10 @@ export default {
     calcTableHeight() {
       var footer = this.$refs.pageFooter;
       var footerTop = footer.getBoundingClientRect().top;
+      
       var dataTable = this.$refs.dataTable.$el;
       var dataTableTop = dataTable.getBoundingClientRect().top;
+      console.log(footerTop, dataTableTop);
       this.dataTableHeight = footerTop - dataTableTop - 150;
     },
   },
