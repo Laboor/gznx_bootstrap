@@ -54,16 +54,12 @@ public class ExecutorService {
                         }
                         BufferedReader br = new BufferedReader(new InputStreamReader(is, Charset.forName(charset)));
                         String line = null;
-                        while ((line = br.readLine()) != null && process.isAlive()) {
+                        while ((line = br.readLine()) != null) {
                             // 中断处理
                             if (Thread.currentThread().isInterrupted()) {
                                 throw new InterruptedException("线程被手动中断");
                             }
-                            if (line != null) {
-                                boolean result = logMessageHandler.sendMessageToUser(commandInfo.getId(), line);
-                                if (!result) break;
-//                                LOG.info(line);
-                            }
+                            logMessageHandler.sendMessageToUser(commandInfo.getId(), line);
                         }
                     }
                     // 等待脚本执行完毕
