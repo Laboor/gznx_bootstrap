@@ -62,7 +62,7 @@
             <template slot-scope="scope">
               <el-tag
                 v-if="scope.row.type == 'shell'"
-                style="border-color: #d3adf7; color: #915de7;"
+                style="border-color: #d3adf7; color: #915de7"
                 color="#f9f0ff"
                 type="success"
                 size="small"
@@ -70,7 +70,7 @@
               >
               <el-tag
                 v-if="scope.row.type == 'log'"
-                style="border-color: #87e8de; color: #08979c;"
+                style="border-color: #87e8de; color: #08979c"
                 color="#e6fffb"
                 type="success"
                 size="small"
@@ -107,22 +107,15 @@
           ></el-table-column>
           <el-table-column prop="file.uploadDir" label="上传路径" width="300">
             <template slot-scope="scope">
-              <el-input
+              <folder-selector
                 v-if="!scope.row.isConfirmPath"
-                v-model="scope.row.file.uploadDir"
+                :value="scope.row.file.uploadDir"
+                :width="220"
                 :class="{
                   'input-upload-path-err': errFlash,
                 }"
-                size="mini"
-                placeholder="请输入上传路径"
-              >
-                <el-button
-                  class="input-mini-btn"
-                  slot="append"
-                  icon="el-icon-check"
-                  @click="handleConfirmUploadPath(scope, scope.row)"
-                ></el-button>
-              </el-input>
+                @confirm="handleConfirmUploadPath($event, scope.row)"
+              ></folder-selector>
               <template v-else>
                 {{ scope.row.file.uploadDir }}
                 <el-tooltip
@@ -225,7 +218,7 @@
       <img class="logo-mini" alt="logo" src="../assets/gzrc_logo.png" />
       <span>贵州农信 ©2022 脚本启动工具</span>
     </div>
-    
+
     <el-dialog
       title="确认信息"
       :visible.sync="confirmInfoDialog"
@@ -236,7 +229,7 @@
       <span class="dialog-label">操作类型：</span
       ><el-tag
         size="medium"
-        style="border-color: #d3adf7; color: #915de7;"
+        style="border-color: #d3adf7; color: #915de7"
         color="#f9f0ff"
         >{{ commandTypeOpt.label }}</el-tag
       ><br />
@@ -251,7 +244,7 @@
       >
         <el-tag
           size="medium"
-          style="border-color: #d3adf7; color: #915de7;"
+          style="border-color: #d3adf7; color: #915de7"
           color="#f9f0ff"
           >{{ commandTag }}</el-tag
         >
@@ -259,16 +252,24 @@
       <el-tag
         v-else
         size="medium"
-        style="border-color: #d3adf7; color: #915de7;"
+        style="border-color: #d3adf7; color: #915de7"
         color="#f9f0ff"
         >{{ command }}</el-tag
       >
       <br />
       <span class="dialog-label">是否打印日志：</span>
-      <el-radio class="dialog-content" :disabled="commandType != '1'" v-model="isPrintLog" :label="true"
+      <el-radio
+        class="dialog-content"
+        :disabled="commandType != '1'"
+        v-model="isPrintLog"
+        :label="true"
         >是</el-radio
       >
-      <el-radio class="dialog-content" :disabled="commandType != '1'" v-model="isPrintLog" :label="false"
+      <el-radio
+        class="dialog-content"
+        :disabled="commandType != '1'"
+        v-model="isPrintLog"
+        :label="false"
         >否</el-radio
       ><br />
       <template v-if="isPrintLog">
@@ -299,38 +300,40 @@
 </template>
 
 <script>
-import Uploader from '@/components/Uploader';
-import api from '@/api';
+import FolderSelector from "@/components/FolderSelector";
+import Uploader from "@/components/Uploader";
+import api from "@/api";
 
 export default {
   components: {
     Uploader,
+    FolderSelector,
   },
   data() {
     return {
-      command: '',
-      commandType: '1',
+      command: "",
+      commandType: "1",
       commandTypeOpts: [
         {
-          label: '执行脚本',
-          value: '1',
-          type: 'shell',
-          placeholder: '请输入脚本路径或命令...',
-          execBtnText: '执行',
+          label: "执行脚本",
+          value: "1",
+          type: "shell",
+          placeholder: "请输入脚本路径或命令...",
+          execBtnText: "执行",
         },
         {
-          label: '浏览日志',
-          value: '2',
-          type: 'log',
-          placeholder: '请输入日志浏览命令，例如：tail -f ...',
-          execBtnText: '浏览',
+          label: "浏览日志",
+          value: "2",
+          type: "log",
+          placeholder: "请输入日志浏览命令，例如：tail -f ...",
+          execBtnText: "浏览",
         },
         {
-          label: '上传文件',
-          value: '3',
-          type: 'file',
-          placeholder: '点击添加文件',
-          execBtnText: '上传',
+          label: "上传文件",
+          value: "3",
+          type: "file",
+          placeholder: "点击添加文件",
+          execBtnText: "上传",
         },
       ],
       execTableData: [],
@@ -341,7 +344,7 @@ export default {
       errFlash: false,
       isErrFlashing: false,
       uploader: null,
-      logCharset: 'UTF-8',
+      logCharset: "UTF-8",
       dataTableHeight: null,
       historyList: [],
     };
@@ -351,7 +354,7 @@ export default {
     this.uploader = this.$refs.uploader;
     var that = this;
     // 三秒轮询一次
-    this.pollingTimer = setInterval(function() {
+    this.pollingTimer = setInterval(function () {
       that.getExecList();
     }, 3000);
     this.calcTableHeight();
@@ -363,7 +366,7 @@ export default {
     commandTag() {
       if (!this.command) return;
       if (this.command.length < 40) return;
-      return this.command.slice(0, 40) + '...';
+      return this.command.slice(0, 40) + "...";
     },
   },
   methods: {
@@ -387,7 +390,7 @@ export default {
       };
     },
     getHistoryListFromLocalStorage(type) {
-      var historyList = window.localStorage.getItem(type + 'HistoryList');
+      var historyList = window.localStorage.getItem(type + "HistoryList");
       historyList = JSON.parse(historyList);
       if (!historyList) {
         historyList = [];
@@ -412,7 +415,7 @@ export default {
         date: Date.now(),
       });
       var newHistoryList = JSON.stringify(historyList);
-      window.localStorage.setItem(type + 'HistoryList', newHistoryList);
+      window.localStorage.setItem(type + "HistoryList", newHistoryList);
     },
     execCommand() {
       return this.axios
@@ -434,9 +437,9 @@ export default {
     },
     handleExec() {
       this.$refs.autocomplete.close();
-      if (this.commandType != '3' && this.command) {
+      if (this.commandType != "3" && this.command) {
         this.confirmInfoDialog = true;
-      } else if (this.commandType == '3') {
+      } else if (this.commandType == "3") {
         // 检查上传地址是否为空
         for (var item of this.uploadTableData) {
           if (!item.file.uploadDir || !item.isConfirmPath) {
@@ -462,7 +465,7 @@ export default {
           if (res.data.success) {
             that.$message({
               message: res.data.message,
-              type: 'success',
+              type: "success",
             });
             this.getExecList();
           } else {
@@ -481,25 +484,25 @@ export default {
           that.getExecList();
           if (that.isPrintLog) {
             var url = that.$router.resolve({
-              path: '/LogView',
+              path: "/LogView",
               query: {
                 type: that.commandTypeOpt.type,
                 command: that.command,
               },
             });
-            var windowName = '_' + that.command;
+            var windowName = "_" + that.command;
             if (window.localStorage.getItem(windowName) == url.href) {
-              this.$message.error('该日志消息页面已存在，请勿重复打开！');
+              this.$message.error("该日志消息页面已存在，请勿重复打开！");
             } else {
               this.$message({
                 message: res.message,
-                type: 'success',
+                type: "success",
               });
               // 延迟0.5秒打开新页面，等待原页面执行完毕
-              setTimeout(function() {
+              setTimeout(function () {
                 var newPage = window.open(url.href, windowName);
-                newPage.onload = function() {
-                  newPage.document.title = that.command + ' 日志消息';
+                newPage.onload = function () {
+                  newPage.document.title = that.command + " 日志消息";
                   window.localStorage.setItem(windowName, url.href);
                   return false;
                 };
@@ -508,7 +511,7 @@ export default {
           } else {
             this.$message({
               message: res.message,
-              type: 'success',
+              type: "success",
             });
           }
         }
@@ -525,14 +528,14 @@ export default {
               command: record.command,
               startTime: record.startTime,
               type: record.type,
-              status: '运行中',
+              status: "运行中",
             });
           that.execTableData = records;
         }
       });
     },
     handleSelectFile(e) {
-      if (this.commandType == '3' && e.target.tagName == 'INPUT') {
+      if (this.commandType == "3" && e.target.tagName == "INPUT") {
         this.$refs.shadowFileInput.click();
       }
     },
@@ -567,8 +570,8 @@ export default {
         this.uploadTableData.splice(index, 1);
       }
     },
-    handleConfirmUploadPath(scope, row) {
-      if (!row.file.uploadDir) return;
+    handleConfirmUploadPath(pathValue, row) {
+      row.file.uploadDir = pathValue.join('/');
       row.isConfirmPath = true;
     },
     handleEditUploadPath(scope, row) {
@@ -579,7 +582,7 @@ export default {
       this.isErrFlashing = true;
       var that = this;
       var times = 6;
-      var timer = setInterval(function() {
+      var timer = setInterval(function () {
         that.errFlash = !that.errFlash;
         times--;
         if (times == 0) {
@@ -595,7 +598,7 @@ export default {
       var originFile = e.target.files[0];
       if (!originFile) return;
       this.uploader.addFiles(originFile);
-      e.target.value = '';
+      e.target.value = "";
     },
     handleFileQueued(file) {
       this.uploadTableData.push({
@@ -605,7 +608,7 @@ export default {
         isStart: false,
         success: false,
         error: false,
-        errorMsg: '',
+        errorMsg: "",
         isUploading: false,
         file: file,
       });
@@ -632,7 +635,7 @@ export default {
       });
     },
     handleRetryUpload(scope, row) {
-      row.file.setStatus('error');
+      row.file.setStatus("error");
       this.uploader.retry(row.file);
     },
     setUploadTableDataByFileId(id, obj) {
@@ -650,7 +653,7 @@ export default {
     calcTableHeight() {
       var footer = this.$refs.pageFooter;
       var footerTop = footer.getBoundingClientRect().top;
-      
+
       var dataTable = this.$refs.dataTable.$el;
       var dataTableTop = dataTable.getBoundingClientRect().top;
       console.log(footerTop, dataTableTop);
@@ -752,7 +755,7 @@ export default {
   padding-left: 15px;
 }
 ::v-deep .el-table thead th .cell::before {
-  content: '*';
+  content: "*";
   color: #02ac49;
   position: absolute;
   width: 6px;

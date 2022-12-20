@@ -7,4 +7,5 @@ export default {
   checkFile: '/file/check',
   mergeFile: '/file/merge',
   cancelUpload: '/file/cancel',
+  dirList: '/file/dirs',
 };
