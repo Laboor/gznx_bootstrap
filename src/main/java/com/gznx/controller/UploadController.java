@@ -11,6 +11,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -65,6 +69,31 @@ public class UploadController {
         }
         resp.setSuccess(!result);
         resp.setMessage(!result ? "chunks文件删除成功！" : "文件不存在！");
+        return resp;
+    }
+
+    @GetMapping("/dirs")
+    public CommonResp dir(@RequestParam Map<String, String> req) {
+        String dirPath = req.get("dirPath");
+        File[] dirs;
+        if (StringUtils.hasText(dirPath)) {
+            File file = new File(dirPath);
+            if (file.isDirectory()) {
+                dirs = new File(dirPath).listFiles();
+            } else {
+
+            }
+        } else {
+            dirs = File.listRoots();
+        }
+        List<String> dirList = new ArrayList<>();
+        for (File dir : dirs) {
+            dirList.add(dir.getAbsolutePath());
+        }
+        CommonResp<List> resp = new CommonResp<>();
+        resp.setSuccess(true);
+        resp.setMessage("获取服务器目录成功！");
+        resp.setData(dirList);
         return resp;
     }
 }
