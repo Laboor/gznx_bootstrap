@@ -12,10 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.annotation.Resource;
 import javax.validation.Valid;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/file")
@@ -81,14 +78,22 @@ public class UploadController {
             if (file.isDirectory()) {
                 dirs = new File(dirPath).listFiles();
             } else {
-
+                dirs = null;
             }
         } else {
             dirs = File.listRoots();
         }
-        List<String> dirList = new ArrayList<>();
+        List<Map> dirList = new ArrayList<>();
         for (File dir : dirs) {
-            dirList.add(dir.getAbsolutePath());
+            if (!dir.isDirectory()) continue;
+            boolean isLeaf = true;
+            if (dir.list() != null && dir.list().length > 0 && dir.canRead()) {
+                isLeaf = false;
+            }
+            Map<String, Object> dirInfo = new HashMap<>();
+            dirInfo.put("path", dir.getPath().replace("\\", "/"));
+            dirInfo.put("leaf", isLeaf);
+            dirList.add(dirInfo);
         }
         CommonResp<List> resp = new CommonResp<>();
         resp.setSuccess(true);

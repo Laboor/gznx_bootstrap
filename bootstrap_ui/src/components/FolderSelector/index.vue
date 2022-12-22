@@ -6,6 +6,7 @@
       v-model="pathValue"
       size="mini"
       placeholder="请选择上传路径"
+      separator="/"
       filterable
     ></el-cascader>
     <el-button
@@ -26,7 +27,7 @@ export default {
     value: String,
     width: Number,
   },
-  data() {
+  data () {
     return {
       pathValue: [1, 2],
       props: {
@@ -37,30 +38,40 @@ export default {
     };
   },
   methods: {
-    lazyLoad(node, resolve) {
-      // const { level } = node;
-      console.log(node);
+    lazyLoad (node, resolve) {
+      var { isLeaf, root, pathLabels } = node;
+      if (isLeaf) {
+        resolve();
+        return
+      }
       this.axios
         .get(api.dirList, {
           params: {
-            dirPath: node.value,
+            dirPath: root ? '' : pathLabels.join('/'),
           },
         })
         .then((res) => {
           var data = res.data.data;
-          if (!data.length) return;
+          if (!data.length) {
+            resolve();
+            return
+          }
           var nodes = [];
           for (var i = 0; i < data.length; i++) {
+            var label = data[i].path.substring(data[i].path.lastIndexOf('/') + 1);
+            if (root) {
+              label = data[i].path.slice(0, data[i].path.length - 1);
+            }
             nodes.push({
-              value: data[i],
-              label: data[i],
-              leaf: false,
+              value: label,
+              label: label,
+              leaf: data[i].leaf,
             });
           }
           resolve(nodes);
         });
     },
-    handleConfirmUploadPath() {
+    handleConfirmUploadPath () {
       if (this.pathValue) {
         this.$emit("confirm", this.pathValue);
       }
