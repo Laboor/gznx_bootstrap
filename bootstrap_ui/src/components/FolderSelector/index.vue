@@ -3,11 +3,12 @@
     <el-cascader
       :props="props"
       :style="{ width: width + 'px' }"
-      v-model="pathValue"
+      ref="folderSelector"
       size="mini"
       placeholder="请选择上传路径"
       separator="/"
       filterable
+      @change.native="handleInput"
     ></el-cascader>
     <el-button
       class="input-mini-btn"
@@ -27,9 +28,8 @@ export default {
     value: String,
     width: Number,
   },
-  data () {
+  data() {
     return {
-      pathValue: [1, 2],
       props: {
         checkStrictly: true,
         lazy: true,
@@ -38,27 +38,29 @@ export default {
     };
   },
   methods: {
-    lazyLoad (node, resolve) {
+    lazyLoad(node, resolve) {
       var { isLeaf, root, pathLabels } = node;
       if (isLeaf) {
         resolve();
-        return
+        return;
       }
       this.axios
         .get(api.dirList, {
           params: {
-            dirPath: root ? '' : pathLabels.join('/'),
+            dirPath: root ? "" : pathLabels.join("/"),
           },
         })
         .then((res) => {
           var data = res.data.data;
           if (!data.length) {
             resolve();
-            return
+            return;
           }
           var nodes = [];
           for (var i = 0; i < data.length; i++) {
-            var label = data[i].path.substring(data[i].path.lastIndexOf('/') + 1);
+            var label = data[i].path.substring(
+              data[i].path.lastIndexOf("/") + 1
+            );
             if (root) {
               label = data[i].path.slice(0, data[i].path.length - 1);
             }
@@ -71,10 +73,14 @@ export default {
           resolve(nodes);
         });
     },
-    handleConfirmUploadPath () {
-      if (this.pathValue) {
-        this.$emit("confirm", this.pathValue);
+    handleConfirmUploadPath() {
+      var path = this.$refs.folderSelector.presentText;
+      if (path.length) {
+        this.$emit("confirm", path);
       }
+    },
+    handleInput(e) {
+      this.$refs.folderSelector.presentText = e.target.value;
     },
   },
 };
@@ -95,5 +101,19 @@ export default {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   background: #f1f1f1;
+}
+.el-cascader__dropdown ::v-deep .el-cascader-panel {
+  font-size: 13px !important;
+}
+</style>
+
+<style>
+.el-cascader-node__label {
+  font-size: 13px;
+}
+.el-cascader-node {
+  height: 27px;
+  line-height: 27px;
+  padding: 0 30px 0 13px;
 }
 </style>

@@ -570,8 +570,8 @@ export default {
         this.uploadTableData.splice(index, 1);
       }
     },
-    handleConfirmUploadPath(pathValue, row) {
-      row.file.uploadDir = pathValue.join('/');
+    handleConfirmUploadPath(path, row) {
+      row.file.uploadDir = path;
       row.isConfirmPath = true;
     },
     handleEditUploadPath(scope, row) {
@@ -656,7 +656,6 @@ export default {
 
       var dataTable = this.$refs.dataTable.$el;
       var dataTableTop = dataTable.getBoundingClientRect().top;
-      console.log(footerTop, dataTableTop);
       this.dataTableHeight = footerTop - dataTableTop - 150;
     },
   },
