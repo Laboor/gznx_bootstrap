@@ -72,17 +72,7 @@ public class UploadController {
     @GetMapping("/dirs")
     public CommonResp dir(@RequestParam Map<String, String> req) {
         String dirPath = req.get("dirPath");
-        File[] dirs;
-        if (StringUtils.hasText(dirPath)) {
-            File file = new File(dirPath);
-            if (file.isDirectory()) {
-                dirs = new File(dirPath).listFiles();
-            } else {
-                dirs = null;
-            }
-        } else {
-            dirs = File.listRoots();
-        }
+        File[] dirs = uploadService.getSubDirectory(dirPath);
         List<Map> dirList = new ArrayList<>();
         for (File dir : dirs) {
             if (!dir.isDirectory()) continue;

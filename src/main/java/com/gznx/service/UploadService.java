@@ -175,4 +175,23 @@ public class UploadService {
         }
         return desc;
     }
+
+    public File[] getSubDirectory(String path) {
+        File[] dirs = null;
+        if (StringUtils.hasText(path)) {
+            File file = new File(path);
+            if (file.isDirectory()) {
+                dirs = new File(path).listFiles();
+            }
+        } else {
+            dirs = File.listRoots();
+        }
+        Arrays.sort(dirs, new Comparator<File>() {
+            @Override
+            public int compare(File file1, File file2) {
+                return file1.getName().compareToIgnoreCase(file2.getName());
+            }
+        });
+        return dirs;
+    }
 }

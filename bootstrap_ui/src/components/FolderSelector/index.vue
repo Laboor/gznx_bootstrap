@@ -47,7 +47,7 @@ export default {
       this.axios
         .get(api.dirList, {
           params: {
-            dirPath: root ? "" : pathLabels.join("/"),
+            dirPath: root ? "/" : pathLabels.join("/"),
           },
         })
         .then((res) => {
@@ -62,7 +62,7 @@ export default {
               data[i].path.lastIndexOf("/") + 1
             );
             if (root) {
-              label = data[i].path.slice(0, data[i].path.length - 1);
+              label = "/" + label
             }
             nodes.push({
               value: label,
